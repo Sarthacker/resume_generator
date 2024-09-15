@@ -13,7 +13,6 @@ This is a simple web application that generates an HTML resume from a LinkedIn P
 - **Streamlit**: Framework for creating a simple web interface for uploading PDF files and interacting with the application.
 - **PyPDF2**: Python library used to extract text from PDF files.
 - **Google Generative AI (Gemini)**: Utilized to generate the HTML resume and inline CSS.
-- **Deployment**: Deployed using Vercel/GitHub Pages for easy sharing.
 
 ## Approach
 
@@ -35,7 +34,7 @@ The goal of the assignment was to create a simple web application that:
 2. Extracts the relevant content from the PDF.
 3. Generates a professional, single-page HTML resume.
 4. Provides the user with an interface to upload the PDF and download the generated HTML file.
-5. The application must use an OpenAI (or Gemini) API for content generation and be deployed on a platform like Vercel or GitHub Pages.
+5. The application must use a Gemini API for content generation and be deployed on a platform like Vercel or GitHub Pages.
 
 ## My Solution
 
@@ -45,14 +44,12 @@ The goal of the assignment was to create a simple web application that:
     - **PDF Text Extraction**: I used the `PyPDF2` library to extract text from the uploaded PDF. This allowed me to convert the PDF data into plain text that can be processed further by the AI model. The process involves reading each page of the PDF and concatenating the extracted text.
 
 ### 2. Generating the HTML Resume with AI
-- **Challenge**: Once the text is extracted, I needed to generate a professional HTML resume with inline CSS that adheres to standard resume formats.
-- **Solution**: I utilized **Google Generative AI (Gemini)** to generate the HTML resume.
-    - I crafted a specific prompt for the AI model, ensuring that it generates a clean, professional-looking HTML document. Key conditions in the prompt included:
-        - The resume should fit on a single A4 page.
-        - Proper alignment and spacing between headings and text.
-        - Ignoring irrelevant sections, like the summary part, from the extracted text.
-        - Keeping the resume content clean, bullet-pointed, and left-aligned.
-    - The response from the AI provided the necessary HTML and inline CSS to create a professional resume layout.
+   - I crafted a specific prompt for the AI model, ensuring that it generates a clean, professional-looking HTML document. Key conditions in the prompt included:
+   - The resume should fit on a single A4 page.
+   - Proper alignment and spacing between headings and text.
+   - Ignoring irrelevant sections, like the summary part, from the extracted text.
+   - Keeping the resume content clean, bullet-pointed, and left-aligned.
+   - The response from the AI provided the necessary HTML and inline CSS to create a professional resume layout.
 
 ### 3. User Interaction and HTML Resume Download
 - **Challenge**: Provide an interface that allows users to easily interact with the application and download the HTML resume.
