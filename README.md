@@ -64,11 +64,6 @@ The goal of the assignment was to create a simple web application that:
 - **Challenge**: The application needed to use the OpenAI (Gemini) API, but the API key should not be hardcoded or exposed publicly.
 - **Solution**: I implemented a simple input form in `Streamlit` where the user is prompted to enter their API key. This allows each user to provide their own Gemini API key securely without exposing it in the code or in the public domain.
 
-### 5. Deployment
-- **Challenge**: The application needed to be deployed and accessible via a public URL.
-- **Solution**: I deployed the application using **Vercel**, a platform that allows fast, easy deployment of web apps.
-    - **Alternative**: The app can also be deployed on **GitHub Pages** if needed. Both platforms ensure the app is accessible to users via a simple URL.
-
 ## Conclusion
 
 ### Why This Approach Works
@@ -76,5 +71,3 @@ The goal of the assignment was to create a simple web application that:
 - **User-Friendly Interface**: The `Streamlit` framework provided an intuitive and simple interface for users to interact with the application, upload their PDF, and download the HTML resume.
 - **Customizability**: By using a dynamic prompt for the AI, the resume generation process can be easily modified to accommodate different styles or formats in the future.
 - **Secure**: The API key handling is secure, as users are prompted to enter their key, which is never exposed publicly or stored.
-
-This approach allowed me to solve the problem within the given 24-hour timeframe while ensuring a functional and easy-to-use application.
